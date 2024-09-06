@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'backend/db.php'; ?>
+<?php include 'backend/settings.php'; ?>
 <?php include 'head.php'; ?>
 
 <body>

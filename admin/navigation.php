@@ -24,6 +24,20 @@
         </li>
 
         <li class="menu-item">
+            <a href="products.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-package"></i>
+                <div data-i18n="Analytics">Products</div>
+            </a>
+        </li>
+
+        <li class="menu-item">
+            <a href="categories.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-category"></i>
+                <div data-i18n="Analytics">Categories</div>
+            </a>
+        </li>
+
+        <li class="menu-item">
             <a href="settings.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div data-i18n="Analytics">Settings</div>

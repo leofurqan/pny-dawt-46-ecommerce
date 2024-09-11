@@ -2,6 +2,17 @@
 <html lang="en">
 <?php include 'backend/db.php'; ?>
 <?php include 'backend/settings.php'; ?>
+<?php
+$categories = array();
+
+$query = $conn->prepare("SELECT * FROM categories");
+$query->execute();
+$result = $query->get_result();
+
+while ($row = $result->fetch_assoc()) {
+    $categories[] = $row;
+}
+?>
 <?php include 'head.php'; ?>
 
 <body>
@@ -37,7 +48,9 @@
         <div class="container">
             <div class="row">
                 <div class="categories__slider owl-carousel">
-                    <?php include 'home-category.php'; ?>
+                    <?php foreach ($categories as $category) { ?>
+                        <?php include 'home-category.php'; ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -200,7 +213,7 @@
         </div>
     </section>
     <!-- Latest Product Section End -->
-    
+
     <?php include 'footer.php'; ?>
     <?php include 'scripts.php'; ?>
 </body>

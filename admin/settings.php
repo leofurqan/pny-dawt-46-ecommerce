@@ -5,7 +5,7 @@ if (!isset($_SESSION["user_id"])) {
     header('Location: login.php');
 }
 
-include '../backend/db.php';
+include '../backend/settings.php';
 
 if (!empty($_POST['site_title']) && !empty($_POST['system_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['address']) && !empty($_POST['footer_text']) && !empty($_POST['facebook']) && !empty($_POST['instagram'])) {
     $site_title = $_POST['site_title'];
@@ -29,8 +29,6 @@ if (!empty($_POST['site_title']) && !empty($_POST['system_name']) && !empty($_PO
         $_SESSION["message_type"] = "danger";
     }
 }
-
-include '../backend/settings.php';
 
 ?>
 
